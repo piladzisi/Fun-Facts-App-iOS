@@ -21,7 +21,7 @@ struct FactBank {
         "McDonald’s once made bubblegum-flavored broccoli",
         "Some fungi create zombies, then control their minds",
         "The first oranges weren’t orange",
-        "Scotland has 421 words for “snow",
+        "Scotland has 421 words for 'snow'",
         "Peanuts aren’t technically nuts",
         "Armadillo shells are bulletproof",
         "Firefighters use wetting agents to make water wetter",
