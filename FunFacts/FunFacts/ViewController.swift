@@ -5,12 +5,19 @@
 //  Created by Dainis Putans on 3/5/19.
 //  Copyright © 2019 kidsboxgaming. All rights reserved.
 //
-
 import UIKit
+
+extension UIColor {
+    static var random: UIColor {
+        return UIColor(red: .random(in: 0...1),
+                       green: .random(in: 0...1),
+                       blue: .random(in: 0...1),
+                       alpha: 1.0)
+    }
+}
 
 class ViewController: UIViewController {
     let factBank = FactBank()
-    let colorBank = BackgroundColorBank()
     
     @IBOutlet weak var factLabel: UILabel!
     
@@ -18,14 +25,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         factLabel.text = factBank.randomFact()
+        factButton.layer.cornerRadius = 10
     }
-
+    
 
     @IBAction func showFactButton() {
-        let randomColor = colorBank.randomColor()
         factLabel.text = factBank.randomFact()
-        view.backgroundColor = randomColor
-        factButton.tintColor = randomColor
+        let myColor: UIColor = .random
+        view.backgroundColor = myColor
+        factButton.tintColor = myColor
     }
     
 }
