@@ -10,9 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
     let factBank = FactBank()
+    let colorBank = BackgroundColorBank()
     
     @IBOutlet weak var factLabel: UILabel!
     
+    @IBOutlet weak var factButton: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         factLabel.text = factBank.randomFact()
@@ -20,8 +22,10 @@ class ViewController: UIViewController {
 
 
     @IBAction func showFactButton() {
-        
-        factLabel.text = factBank.randomFact()  
+        let randomColor = colorBank.randomColor()
+        factLabel.text = factBank.randomFact()
+        view.backgroundColor = randomColor
+        factButton.tintColor = randomColor
     }
     
 }
